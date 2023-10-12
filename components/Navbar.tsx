@@ -45,7 +45,7 @@ export default function Example() {
 											src="/images/logo.png"
 											alt={COMPANY_NAME}
 											fill
-										/> Joias
+										/>
 									</div>
 								</div>
 								{/** remember that sm: means ate a the small breakpoint */}
