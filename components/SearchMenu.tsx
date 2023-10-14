@@ -1,13 +1,18 @@
 import { Menu, Transition } from "@headlessui/react"
 import { MagnifyingGlassIcon, XMarkIcon } from "@heroicons/react/24/outline"
-const SearchMenu = () => {
+
+interface SearchMenuProps {
+	IconStyle: string,
+}
+
+const SearchMenu = ({ IconStyle }: SearchMenuProps) => {
 	return (
 		<Menu as="div" className="relative flex items-center">
 			{({ open }) => (
 				<>
 					<Menu.Button>
 						{
-							open ? <XMarkIcon className="w-5" /> : <MagnifyingGlassIcon className="w-5" />
+							open ? <XMarkIcon className={`${IconStyle}`} /> : <MagnifyingGlassIcon className={`${IconStyle}`} />
 						}
 					</Menu.Button>
 					<Transition
@@ -19,7 +24,7 @@ const SearchMenu = () => {
 						leaveFrom="transform scale-100 opacity-100"
 						leaveTo="transform scale-95 opacity-0"
 					>
-						<Menu.Items className="absolute top-6 -right-2.5">
+						<Menu.Items className="fixed top-6 -right-5">
 							<Menu.Item>
 								<form className="w-screen px-5">
 									<div className="text-white relative flex w-full">

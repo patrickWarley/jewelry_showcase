@@ -24,13 +24,13 @@ export default function Example() {
 			<Disclosure as="nav" className="bg-black">
 				{({ open }) => (
 					<>
-						<div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+						<div className="mx-auto max-w-7xl px-2 pr-4 sm:px-6 lg:px-8 ">
 							<div className="relative flex h-16 items-center justify-between">
 								<div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
 									{/* Mobile menu button*/}
 									<Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
 										<span className="absolute -inset-0.5" />
-										<span className="sr-only">Open main menu</span>
+										<span className="sr-only">Abri menu principal</span>
 										{open ? (
 											<XMarkIcon className="block h-6 w-6" aria-hidden="true" />
 										) : (
@@ -75,7 +75,7 @@ export default function Example() {
 											<Menu.Button className="relative flex rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
 												<span className="absolute -inset-1.5" />
 												<span className="sr-only">Menu do usuario</span>
-												<UserCircleIcon className="" width={20} aria-hidden="true" />
+												<UserCircleIcon className="navbar_icons" aria-hidden="true" />
 											</Menu.Button>
 										</div>
 										<Transition
@@ -121,8 +121,8 @@ export default function Example() {
 											</Menu.Items>
 										</Transition>
 									</Menu>
-									<ShoppingCartIcon className='w-5 text-white' />
-									<SearchMenu />
+									<ShoppingCartIcon className="navbar_icons" />
+									<SearchMenu IconStyle="navbar_icons" />
 								</div>
 							</div>
 						</div>
