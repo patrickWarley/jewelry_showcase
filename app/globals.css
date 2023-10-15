@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root{
+	--header-size:200px;
+}
+
 *{
 	margin: 0;
 	padding: 0;
@@ -12,6 +16,20 @@ body{
 	@apply bg-black text-white
 }
 
+/*Header styles*/
+
+.header{
+	@apply w-full;
+}
+
 .navbar_icons{
 	@apply w-6 text-white
+}
+
+.navbar_mobile_menu_button{
+	@apply relative inline-flex z-20 fixed items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white
+}
+
+.navbar_menu_item{
+	@apply p-5 w-full block flex items-center;
 }

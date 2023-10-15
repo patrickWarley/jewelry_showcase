@@ -11,7 +11,7 @@ const Header = () => {
 	const [showInfo, setShowInfo] = useState(true);
 
 	return (
-		<div className="w-full">
+		<div id="header" className="header">
 			<DelayedSlidderMsg
 				show={showInfo}
 				delay={5}
