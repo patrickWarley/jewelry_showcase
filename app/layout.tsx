@@ -1,5 +1,7 @@
 import "./globals.css";
 import { Footer, Header } from "../components";
+import { WhatsAppContactIcon } from "@/components/WhatsAppContactIcon";
+import { BackToTop } from "@/components/BackToTop";
 
 export const metadata = {
 	title: 'Jewelry Shop',
@@ -16,6 +18,10 @@ export default function RootLayout({
 			<body className="relative">
 				<Header />
 				{children}
+				<div className="p-5 mb-2 fixed bottom-10 z-10 floating-icons w-screen flex" >
+					<WhatsAppContactIcon className="absolute top-50 left-0" />
+					<BackToTop className="absolute top-50 right-0" />
+				</div>
 				<Footer />
 			</body>
 		</html>

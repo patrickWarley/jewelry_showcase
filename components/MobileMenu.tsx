@@ -33,13 +33,13 @@ const MobileMenu = ({ open, navigation }: MobileMenuProps) => {
 				enter='transition duration-100 ease-out'
 				enterFrom='opacity-0 -translate-x-52'
 				enterTo='opacity-100 translate-x-0'
-				leave="transition duration-200 ease-out"
+				leave="transition duration-100 ease-out"
 				leaveFrom="transform opacity-100 translate-x-0"
 				leaveTo="transform opacity-0 -translate-x-52"
 			>
-				<Disclosure.Panel as="div" className="fixed left-0 top-0 w-screen bg-white h-screen sm:hidden text-black">
+				<Disclosure.Panel as="div" className="fixed left-0 top-0 w-screen bg-white h-screen z-20 sm:hidden text-black">
 					<div
-						className={`absolute space-y-1 px-2 pb-3 pt-2 w-full`}
+						className={`absolute space-y-1 px-2 pb-3 pt-2 w-full z-20`}
 						style={{ top: `${getHeaderSize()}px` }}
 					>
 						{

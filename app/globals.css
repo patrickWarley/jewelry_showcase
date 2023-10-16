@@ -10,6 +10,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 
 body{
@@ -19,7 +20,7 @@ body{
 /*Header styles*/
 
 .header{
-	@apply w-full;
+	@apply w-full relative z-20;
 }
 
 .navbar_icons{
