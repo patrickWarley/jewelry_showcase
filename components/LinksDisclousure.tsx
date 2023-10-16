@@ -31,7 +31,7 @@ const LinksDisclousure = ({ title, links }: prop) => {
 						<Disclosure.Panel className="flex flex-col">
 							{
 								links.map(link => (
-									<Link className="indent-4 text-slate-500 p-2 text-sm" href={link.src}>{link.title}</Link>
+									<Link key={link.title} className="indent-4 text-slate-500 p-2 text-sm" href={link.src}>{link.title}</Link>
 								))
 							}
 						</Disclosure.Panel>

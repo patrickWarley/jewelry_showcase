@@ -1,7 +1,7 @@
 "use client"
 
 import { ChevronUpIcon } from "@heroicons/react/24/outline"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 interface props {
 	className: string,
@@ -10,11 +10,13 @@ export const BackToTop = ({ className }: props) => {
 
 	const [show, setShow] = useState(false);
 
-	window.addEventListener("scroll", () => {
-		const position = window.scrollY;
-		if (position < 300 && show === true) setShow(false);
-		if (position > 300 && show === false) setShow(true);
-	}, { passive: true });
+	useEffect(() => {
+		window.addEventListener("scroll", () => {
+			const position = window.scrollY;
+			if (position < 300 && show === true) setShow(false);
+			if (position > 300 && show === false) setShow(true);
+		}, { passive: true });
+	});
 
 	const scrollTop = () => {
 		window.scrollTo(0, 0);

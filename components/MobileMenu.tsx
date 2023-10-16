@@ -1,6 +1,8 @@
 import { Disclosure, Transition } from "@headlessui/react";
 import { XMarkIcon, Bars3Icon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import { getHeaderSize, classNames } from "@/utils/util";
+import { useEffect, useState } from "react";
+
 
 const showMobileMenu = () => {
 	const body = document.getElementsByTagName("body");
@@ -14,6 +16,12 @@ interface MobileMenuProps {
 }
 
 const MobileMenu = ({ open, navigation }: MobileMenuProps) => {
+	const [headerSize, setHeaderSize] = useState(0);
+
+	useEffect(() => {
+		setHeaderSize(getHeaderSize());
+	});
+
 	return (
 		<>
 			<Disclosure.Button
@@ -40,7 +48,7 @@ const MobileMenu = ({ open, navigation }: MobileMenuProps) => {
 				<Disclosure.Panel as="div" className="fixed left-0 top-0 w-screen bg-white h-screen z-20 sm:hidden text-black">
 					<div
 						className={`absolute space-y-1 px-2 pb-3 pt-2 w-full z-20`}
-						style={{ top: `${getHeaderSize()}px` }}
+						style={{ top: `${headerSize}px` }}
 					>
 						{
 							navigation.map((item) => (
